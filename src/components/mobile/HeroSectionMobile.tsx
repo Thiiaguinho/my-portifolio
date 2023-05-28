@@ -1,12 +1,7 @@
 "use client"
 
-import {
-  borelTurquoise,
-  darkTurquoise,
-  nigthBlue,
-  stoneSilver,
-} from "@/utils/colors"
-import { Avatar, Box, Grid, Group, Image, Title } from "@mantine/core"
+import { borelTurquoise, nigthBlue, stoneSilver } from "@/utils/colors"
+import { Avatar, Box, Group, Title } from "@mantine/core"
 import { ArrowDown } from "lucide-react"
 
 export function HeroSectionMobile() {
@@ -21,7 +16,7 @@ export function HeroSectionMobile() {
         />
       </Group>
       <Box
-        h="100vh"
+        h="100dvh"
         sx={(theme) => ({
           backgroundImage: theme.fn.radialGradient("black", nigthBlue),
           display: "flex",
@@ -34,8 +29,6 @@ export function HeroSectionMobile() {
         <Box
           sx={{
             zIndex: 9999,
-            // backgroundColor: stoneSilver,
-            // opacity: 50,
           }}
         >
           <Title c={stoneSilver} fz={15} ml="0.2rem">
@@ -55,36 +48,9 @@ export function HeroSectionMobile() {
             </Title>
           </Group>
         </Box>
-        {/* <Grid
-          sx={{
-            zIndex: 9999,
-          }}
-        >
-          <Grid.Col span={12}>
-            <Title c={stoneSilver} fz={30} ml="0.7rem">
-              OI, &#128075; EU SOU O THIAGO
-            </Title>
-          </Grid.Col>
-          <Grid.Col span={12}>
-            <Title c={borelTurquoise} fz={150} sx={{ lineHeight: 0.4 }}>
-              REACT
-            </Title>
-            <Title c={borelTurquoise} fz={150} sx={{ lineHeight: 1.1 }}>
-              DEVELOPER
-            </Title>
-          </Grid.Col>
-          <Grid.Col span={1}></Grid.Col>
-          <Grid.Col span={10}>
-            <Title c={stoneSilver} fz={18} mt="-2rem" sx={{ lineHeight: 1 }}>
-              Sou um desenvolvedor full stack que gosta de solucionar problemas,{" "}
-              <br /> atualmente em busca de uma oportunidade de emprego.
-            </Title>
-          </Grid.Col>
-          <Grid.Col span={1}></Grid.Col>
-        </Grid> */}
 
         <Box
-          h="100vh"
+          h="100dvh"
           pos="absolute"
           sx={() => ({
             display: "flex",
