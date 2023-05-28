@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Oi, eu sou o Thiago
 
-## Getting Started
+Sou um desenvolvedor Full Stack especializado em React, atualmente em busca de uma oportunidade de emprego.
 
-First, run the development server:
+## Competências e Objetivos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Resolução de problemas:** Meu principal objetivo é solucionar problemas e ineficiências por meio da automação e programação.
+- **Habilidades técnicas:** Possuo um profundo conhecimento em uma variedade de tecnologias front-end e back-end, incluindo ReactJS, NextJS, NodeJS, além de bibliotecas de componentes CSS como Mantine e Bootstrap.
+- **Banco de dados:** Tenho uma sólida compreensão de estruturas de banco de dados SQL e NoSQL, com experiência na criação e consumo de APIs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Estou ansioso para iniciar minha jornada no mercado de trabalho, onde espero contribuir com minhas habilidades e continuar aprendendo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Experiência de Desenvolvimento de Aplicativo
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Desenvolvi um aplicativo de automação para o recebimento de mensalidades via Pix, utilizando a estrutura Next.js. O projeto envolveu a integração com a API do padrão Pix fornecida pelo banco Sicoob.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+O aplicativo, que está atualmente ativo e disponível em [minha-mensalidade.vercel.app](https://minha-mensalidade.vercel.app/), apresentou desafios significativos. Um dos mais notáveis foi a implementação do consumo da API, que exigia a configuração individualizada para cada usuário com seus respectivos certificados digitais. Esta experiência me proporcionou uma oportunidade valiosa para aprimorar minhas habilidades de resolução de problemas e desenvolvimento de software.
