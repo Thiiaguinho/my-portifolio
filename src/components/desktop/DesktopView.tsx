@@ -1,8 +1,8 @@
 "use client"
 
 import { Box, createStyles } from "@mantine/core"
-import { HeroSection } from "./HeroSection"
-import { Projects } from "./ProjectsSection"
+import { HeroSection } from "./HeroSectionDesktop"
+import { Projects } from "./ProjectsSectionDesktop"
 
 const useStyles = createStyles((theme) => ({
   hiddenMobile: {
@@ -11,12 +11,6 @@ const useStyles = createStyles((theme) => ({
     },
     maxWidth: theme.breakpoints.xl,
     scrollbarColor: "black",
-  },
-
-  hiddenDesktop: {
-    [theme.fn.largerThan("sm")]: {
-      display: "none",
-    },
   },
 }))
 

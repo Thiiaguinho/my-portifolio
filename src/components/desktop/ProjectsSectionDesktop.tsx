@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Grid, Group, List } from "@mantine/core"
+import { Box, Divider, Grid, Group, List } from "@mantine/core"
 
 import { Cards } from "./Cards"
 import { borelTurquoise, nigthBlue } from "@/utils/colors"
@@ -162,37 +162,47 @@ export function Projects() {
   return (
     <Box bg={nigthBlue} p="5%">
       {projects.map((project) => (
-        <Grid key={useId()} mb="1rem">
-          <Grid.Col span={4} key={useId()}>
-            <Cards
-              image={project.image}
-              link={project.link}
-              title={project.title}
-              description={project.description}
-              author={project.author}
-              rating={project.rating}
-            />
-          </Grid.Col>
-          <Grid.Col span={8} key={useId()}>
-            <Box h={375}>
-              <Group>
-                {project.stack.map((name) => {
-                  const Icon = icons[name]
-                  return (
-                    <Box w={36} h={36} key={useId()}>
-                      {Icon}
-                    </Box>
-                  )
-                })}
-              </Group>
-              <List size="sm" c={borelTurquoise} p="1rem">
-                {project.list.map((item) => (
-                  <List.Item key={useId()}>{item}</List.Item>
-                ))}
-              </List>
-            </Box>
-          </Grid.Col>
-        </Grid>
+        <Box key={useId()}>
+          <Divider
+            size="xs"
+            mb="2rem"
+            color={borelTurquoise}
+            // label={project.name}
+            labelPosition="center"
+          />
+
+          <Grid key={useId()} mb="1rem">
+            <Grid.Col span={4} key={useId()}>
+              <Cards
+                image={project.image}
+                link={project.link}
+                title={project.title}
+                description={project.description}
+                author={project.author}
+                rating={project.rating}
+              />
+            </Grid.Col>
+            <Grid.Col span={8} key={useId()}>
+              <Box h={375}>
+                <Group>
+                  {project.stack.map((name) => {
+                    const Icon = icons[name]
+                    return (
+                      <Box w={36} h={36} key={useId()}>
+                        {Icon}
+                      </Box>
+                    )
+                  })}
+                </Group>
+                <List size="sm" c={borelTurquoise} p="1rem">
+                  {project.list.map((item) => (
+                    <List.Item key={useId()}>{item}</List.Item>
+                  ))}
+                </List>
+              </Box>
+            </Grid.Col>
+          </Grid>
+        </Box>
       ))}
     </Box>
   )
