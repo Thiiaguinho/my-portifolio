@@ -11,7 +11,6 @@ import {
 } from "@mantine/core"
 
 import { borelTurquoise, nigthBlue, stoneSilver } from "@/utils/colors"
-import { useId } from "@mantine/hooks"
 import { Cards } from "../desktop/Cards"
 
 interface Author {
@@ -173,7 +172,7 @@ export function ProjectsMobile() {
   return (
     <Box bg={nigthBlue} p="5%">
       {projects.map((project) => (
-        <Stack key={useId()} mb="2rem">
+        <Stack key={project.name} mb="2rem">
           <Divider
             size="xs"
             mb="1rem"
@@ -207,13 +206,13 @@ export function ProjectsMobile() {
               },
             }}
           >
-            <Accordion.Item value={project.name} key={useId()}>
+            <Accordion.Item value={project.name} key={project.name}>
               <Accordion.Control>
                 <Group noWrap>
                   {project.stack.map((name) => {
                     const Icon = icons[name]
                     return (
-                      <Box w={36} h={36} key={useId()}>
+                      <Box w={36} h={36} key={name}>
                         {Icon}
                       </Box>
                     )
@@ -226,7 +225,7 @@ export function ProjectsMobile() {
               <Accordion.Panel>
                 <List size="sm" c={borelTurquoise} p="1rem">
                   {project.list.map((item) => (
-                    <List.Item key={useId()}>{item}</List.Item>
+                    <List.Item key={item.substring(0, 7)}>{item}</List.Item>
                   ))}
                 </List>
               </Accordion.Panel>

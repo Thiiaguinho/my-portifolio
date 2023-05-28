@@ -4,7 +4,6 @@ import { Box, Divider, Grid, Group, List } from "@mantine/core"
 
 import { Cards } from "./Cards"
 import { borelTurquoise, nigthBlue } from "@/utils/colors"
-import { useId } from "@mantine/hooks"
 
 interface Author {
   name: string
@@ -14,6 +13,7 @@ interface Author {
 type IconName = "react" | "mantine" | "nextjs" | "typescript"
 
 interface Project {
+  name: string
   image: string
   link: string
   title: string
@@ -117,6 +117,7 @@ export function Projects() {
 
   const projects: Project[] = [
     {
+      name: "Minha Mensalidade",
       image:
         "https://res.cloudinary.com/dr1k5sqoo/image/upload/v1685257191/Screenshot_223_gta5y1.png",
       link: "https://minha-mensalidade.vercel.app/",
@@ -140,6 +141,7 @@ export function Projects() {
       ],
     },
     {
+      name: "Em Breve",
       image:
         "https://res.cloudinary.com/dr1k5sqoo/image/upload/v1685258936/Screenshot_226_c4yoeg.png",
       link: "#",
@@ -162,7 +164,7 @@ export function Projects() {
   return (
     <Box bg={nigthBlue} p="5%">
       {projects.map((project) => (
-        <Box key={useId()}>
+        <Box key={project.name}>
           <Divider
             size="xs"
             mb="2rem"
@@ -171,8 +173,8 @@ export function Projects() {
             labelPosition="center"
           />
 
-          <Grid key={useId()} mb="1rem">
-            <Grid.Col span={4} key={useId()}>
+          <Grid mb="1rem">
+            <Grid.Col span={4}>
               <Cards
                 image={project.image}
                 link={project.link}
@@ -182,13 +184,13 @@ export function Projects() {
                 rating={project.rating}
               />
             </Grid.Col>
-            <Grid.Col span={8} key={useId()}>
+            <Grid.Col span={8}>
               <Box h={375}>
                 <Group>
                   {project.stack.map((name) => {
                     const Icon = icons[name]
                     return (
-                      <Box w={36} h={36} key={useId()}>
+                      <Box w={36} h={36} key={name}>
                         {Icon}
                       </Box>
                     )
@@ -196,7 +198,7 @@ export function Projects() {
                 </Group>
                 <List size="sm" c={borelTurquoise} p="1rem">
                   {project.list.map((item) => (
-                    <List.Item key={useId()}>{item}</List.Item>
+                    <List.Item key={item.substring(0, 7)}>{item}</List.Item>
                   ))}
                 </List>
               </Box>

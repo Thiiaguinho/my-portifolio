@@ -89,7 +89,7 @@ export function Cards({
     >
       <Card.Section>
         <a {...linkProps}>
-          <Image src={image} height={200} />
+          <Image alt={author.name} src={image} height={200} />
         </a>
       </Card.Section>
 

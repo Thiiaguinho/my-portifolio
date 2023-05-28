@@ -9,6 +9,7 @@ export function HeroSection() {
     <Box>
       <Group pos="absolute" w="100%" position="right">
         <Image
+          alt="Thiago"
           width={497}
           height="100vh"
           src="https://res.cloudinary.com/dr1k5sqoo/image/upload/v1685250075/ThiagoPortifolio-v2_ed7e3s.png"
