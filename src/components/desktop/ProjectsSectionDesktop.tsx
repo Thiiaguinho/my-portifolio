@@ -1,6 +1,14 @@
 "use client"
 
-import { Box, Divider, Grid, Group, List } from "@mantine/core"
+import {
+  Box,
+  Divider,
+  Grid,
+  Group,
+  List,
+  Stack,
+  createStyles,
+} from "@mantine/core"
 
 import { Cards } from "./Cards"
 import { borelTurquoise, nigthBlue } from "@/utils/colors"
@@ -24,7 +32,15 @@ interface Project {
   list: string[]
 }
 
+const useStyles = createStyles((theme) => ({
+  changeWidthOnLargerScreens: {
+    [theme.fn.largerThan("xl")]: { minWidth: theme.breakpoints.xl },
+  },
+}))
+
 export function Projects() {
+  const { classes } = useStyles()
+
   const icons = {
     react: (
       <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,14 +178,28 @@ export function Projects() {
   ]
 
   return (
-    <Box bg={nigthBlue} p="5%">
+    <Stack
+      align="center"
+      bg={nigthBlue}
+      sx={(theme) => ({
+        backgroundImage: theme.fn.radialGradient("black", nigthBlue),
+        minWidth: "100vw",
+      })}
+    >
       {projects.map((project) => (
-        <Box key={project.name}>
+        <Box
+          className={classes.changeWidthOnLargerScreens}
+          px="5%"
+          key={project.name}
+          sx={(theme) => ({
+            minWidth: "100vw",
+            maxWidth: theme.breakpoints.xl,
+          })}
+        >
           <Divider
             size="xs"
             mb="2rem"
             color={borelTurquoise}
-            // label={project.name}
             labelPosition="center"
           />
 
@@ -206,6 +236,6 @@ export function Projects() {
           </Grid>
         </Box>
       ))}
-    </Box>
+    </Stack>
   )
 }

@@ -86,6 +86,7 @@ export function Cards({
       radius="md"
       className={cx(classes.card, className)}
       {...others}
+      maw={350}
     >
       <Card.Section>
         <a {...linkProps}>

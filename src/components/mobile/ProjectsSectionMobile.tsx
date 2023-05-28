@@ -172,8 +172,9 @@ export function ProjectsMobile() {
   return (
     <Box bg={nigthBlue} p="5%">
       {projects.map((project) => (
-        <Stack key={project.name} mb="2rem">
+        <Stack key={project.name} mb="2rem" align="center">
           <Divider
+            w="100vw"
             size="xs"
             mb="1rem"
             color={borelTurquoise}
@@ -207,7 +208,7 @@ export function ProjectsMobile() {
             }}
           >
             <Accordion.Item value={project.name} key={project.name}>
-              <Accordion.Control>
+              <Accordion.Control miw={350}>
                 <Group noWrap>
                   {project.stack.map((name) => {
                     const Icon = icons[name]
@@ -222,7 +223,7 @@ export function ProjectsMobile() {
                   </Text>
                 </Group>
               </Accordion.Control>
-              <Accordion.Panel>
+              <Accordion.Panel maw={350}>
                 <List size="sm" c={borelTurquoise} p="1rem">
                   {project.list.map((item) => (
                     <List.Item key={item.substring(0, 7)}>{item}</List.Item>

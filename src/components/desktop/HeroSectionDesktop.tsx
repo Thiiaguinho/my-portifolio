@@ -1,13 +1,25 @@
 "use client"
 
 import { borelTurquoise, nigthBlue, stoneSilver } from "@/utils/colors"
-import { Box, Grid, Group, Image, Title } from "@mantine/core"
+import { Box, Center, Grid, Group, Image, Title } from "@mantine/core"
 import { ArrowDown } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <Box>
-      <Group pos="absolute" w="100%" position="right">
+    <Center
+      sx={(theme) => ({
+        backgroundImage: theme.fn.radialGradient("black", nigthBlue),
+        minWidth: "100vw",
+      })}
+    >
+      <Group
+        pos="absolute"
+        w="100%"
+        position="right"
+        sx={(theme) => ({
+          maxWidth: theme.breakpoints.xl,
+        })}
+      >
         <Image
           alt="Thiago"
           width={497}
@@ -15,16 +27,13 @@ export function HeroSection() {
           src="https://res.cloudinary.com/dr1k5sqoo/image/upload/v1685250075/ThiagoPortifolio-v2_ed7e3s.png"
         />
       </Group>
-      <Box
+      <Center
+        px="5%"
         h="100vh"
-        sx={(theme) => ({
-          backgroundImage: theme.fn.radialGradient("black", nigthBlue),
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        })}
         p="1rem"
+        sx={(theme) => ({
+          maxWidth: theme.breakpoints.xl,
+        })}
       >
         <Grid
           sx={{
@@ -37,10 +46,10 @@ export function HeroSection() {
             </Title>
           </Grid.Col>
           <Grid.Col span={12}>
-            <Title c={borelTurquoise} fz={150} sx={{ lineHeight: 0.4 }}>
+            <Title c={borelTurquoise} fz={125} sx={{ lineHeight: 0.4 }}>
               REACT
             </Title>
-            <Title c={borelTurquoise} fz={150} sx={{ lineHeight: 1.1 }}>
+            <Title c={borelTurquoise} fz={125} sx={{ lineHeight: 1.1 }}>
               DEVELOPER
             </Title>
           </Grid.Col>
@@ -68,7 +77,7 @@ export function HeroSection() {
           </Title>
           <ArrowDown size={100} color={borelTurquoise} />
         </Box>
-      </Box>
-    </Box>
+      </Center>
+    </Center>
   )
 }
