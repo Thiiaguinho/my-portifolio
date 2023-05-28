@@ -2,6 +2,7 @@
 
 import { Box, createStyles } from "@mantine/core"
 import { HeroSection } from "./HeroSection"
+import { Projects } from "./ProjectsSection"
 
 const useStyles = createStyles((theme) => ({
   hiddenMobile: {
@@ -9,6 +10,7 @@ const useStyles = createStyles((theme) => ({
       display: "none",
     },
     maxWidth: theme.breakpoints.xl,
+    scrollbarColor: "black",
   },
 
   hiddenDesktop: {
@@ -24,6 +26,7 @@ export function DesktopView() {
   return (
     <Box className={classes.hiddenMobile}>
       <HeroSection />
+      <Projects />
     </Box>
   )
 }

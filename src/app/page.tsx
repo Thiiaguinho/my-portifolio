@@ -1,4 +1,5 @@
-import { DesktopView } from "@/components/DesktopView"
+import { DesktopView } from "@/components/desktop/DesktopView"
+import "./global.css"
 
 export default function Home() {
   return (

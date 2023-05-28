@@ -10,11 +10,8 @@ import {
   createStyles,
   rem,
 } from "@mantine/core"
-import {
-  UilBookmarkFull,
-  UilHeart,
-  UilShareAlt,
-} from "@iconscout/react-unicons"
+
+import { Bookmark, Heart, Share2 } from "lucide-react"
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -122,13 +119,13 @@ export function Cards({
 
         <Group spacing={8} mr={0}>
           <ActionIcon className={classes.action}>
-            <UilHeart size="1rem" color={theme.colors.red[6]} />
+            <Heart size="1rem" color={theme.colors.red[6]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <UilBookmarkFull size="1rem" color={theme.colors.yellow[7]} />
+            <Bookmark size="1rem" color={theme.colors.yellow[7]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <UilShareAlt size="1rem" />
+            <Share2 size="1rem" />
           </ActionIcon>
         </Group>
       </Group>
