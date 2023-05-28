@@ -1,9 +1,9 @@
-import { HeroSection } from "./components/heroSection"
+import { DesktopView } from "@/components/DesktopView"
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
+      <DesktopView />
     </>
   )
 }

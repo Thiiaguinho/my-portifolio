@@ -1,9 +1,6 @@
-import { Inter } from "next/font/google"
 import RootStyleRegistry from "./emotion"
 
 import { cookies } from "next/headers"
-
-const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Create Next App",
@@ -20,11 +17,7 @@ export default function RootLayout({
     cookieStore.get("mantine-color-scheme")?.value === "dark" ? "dark" : "light"
 
   return (
-    <html
-      lang="pt-BR"
-      className={inter.className}
-      suppressHydrationWarning={true}
-    >
+    <html lang="pt-BR" suppressHydrationWarning={true}>
       <head />
       <body>
         <RootStyleRegistry themeColor={themeColor}>

@@ -12,6 +12,6 @@ Estou ansioso para iniciar minha jornada no mercado de trabalho, onde espero con
 
 ## Experiência de Desenvolvimento de Aplicativo
 
-Desenvolvi um aplicativo de automação para o recebimento de mensalidades via Pix, utilizando a estrutura Next.js. O projeto envolveu a integração com a API do padrão Pix fornecida pelo banco Sicoob.
+Desenvolvi um aplicativo de automação para o recebimento de mensalidades via Pix, utilizando o Next.js. O projeto envolveu a integração com a API padrão Pix fornecida pelo banco Sicoob.
 
 O aplicativo, que está atualmente ativo e disponível em [minha-mensalidade.vercel.app](https://minha-mensalidade.vercel.app/), apresentou desafios significativos. Um dos mais notáveis foi a implementação do consumo da API, que exigia a configuração individualizada para cada usuário com seus respectivos certificados digitais. Esta experiência me proporcionou uma oportunidade valiosa para aprimorar minhas habilidades de resolução de problemas e desenvolvimento de software.
